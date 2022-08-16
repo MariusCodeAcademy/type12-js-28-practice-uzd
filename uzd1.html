@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praktinės užduotys</title>
+</head>
+<body>
+
+    <script>
+        /*  ŽEMIAU YRA PATEIKIAMOS PENKIOS UŽDUOTIES IŠ TEMOS "MASYVAI IR JŲ METODAI"
+        *     - Spręsdami užduotis vadovauikites "INSTRUKCIJA"
+        *     - Atsakymą rašykite po komentaru "SPREDNIMAS"
+        */
+
+        // UŽDUOTIS NR. 1 - GAUKITE VIDUTINĮ AMŽIŲ
+        /* INSTRUKCIJA: Parašykite funkciją getAverageAge(users), kuri gauna objektų masyvą (šiuo atveju arr) 
+        *  su savybe (propery) age ir grąžina vidutinį amžių.
+        *
+        *  Patarimas: Vidutinio amžiaus formulė būtų (age1 + age2 + ... + ageN) / N
+        *  Patarimas: Prisiminkite .reduce() metodą
+        */
+
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 29 };
+
+        let arr = [ john, pete, mary ];
+
+        // SPRENDIMAS
+        
+
+
+        
+        // UŽDUOTIS NR. 2 - FILTRUOKITE UNIKALIUS MASYVO NARIUS
+        /* INSTRUKCIJA: Parašykite funkciją getStrings(array), kuri patikrina masyvą (šiuo atveju strings masyvą) ir jame esančius
+        *  "strings" tipo duomenis patalpina naujame masyve ir jį atgrąžina"  .
+        *
+        *  Patarimas: Prisiminkite let..of ciklą;
+        */
+
+        let strings = ["table", 12, 56, "chair", null, "floor", {number: 25}, "desk", "cup", undefined, "tea"];
+
+        // SPRENDIMAS
+        
+
+
+
+        // UŽDUOTIS NR. 3 - FILTRUOKITE UNIKALIUS MASYVO SKAIČIUS Į DVI GRUPES
+        /* INSTRUKCIJA: Parašykite funkciją getAdults(array), kuri patikrina masyvą (šiuo atveju users masyvą) ir 
+        *  jame esančius users. Tuos users, kurių age yra 18 metų ir didesnis patalpina "adults"  masyve ir jį grąžina.
+        *
+        *  Patarimas: Prisiminkite .filter() metodą;
+        */
+
+        let users = [
+            {name: "John", age: 20},
+            {name: "Ann", age: 14},
+            {name: "Alex ", age: 31},
+            {name: "Tim ", age: 11},
+            {name: "Peter", age: 30},
+            {name: "Sabrina", age: 55},
+            {name: "Max", age: 21},
+        ];
+
+        // SPRENDIMAS
+        
+
+
+
+        // UŽDUOTIS NR. 4 - SUKURKITE NAUJĄ MASYVĄ IŠ TURIMO MASYVO
+        /* INSTRUKCIJA: Parašykite funkciją getNewArray(array,times), kuri turi du parametrus - pirmas yra masyvas (array),
+        *  antras - skaičius (times). Funkcija turi pirmame parametre (masyve) esančius skaičius padauginti iš antrame parametre,
+        *  nurodyto skaičiaus ir grąžinti naują masyvą su padaugintais skaičiais.
+        *
+        *  Patarimas: Prisiminkite .map() metodą;
+        */
+
+        let numbers = [1,2,3,4,5,6,7,8,9];
+
+        // SPRENDIMAS
+        // [5, 10, 15, 20, 25, 30, 35, 40, 45]
+
+        
+        
+        
+        /*
+        Užduotis Nr. 5
+        Parašykite funkciją, kuri pakeis skaičius vietomis taip, kad pirmas skaičius taps paskutiniu, antras piešpaskutiniu, o buvęs paskutinis taps pirmu priešpaskutinis bus antru ir t.t.
+        Pastaba: Argumentas ir grąžinama vertė turi būti nurodomas kaip number.
+        Pvz.:
+        Turime skaičius 32243;
+        Iškvietus funkciją rezultata bus: 34223
+
+        */
+
+        // SPRENDIMAS
+
+
+    </script>
+    
+</body>
+</html>
