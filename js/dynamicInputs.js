@@ -26,10 +26,13 @@ const formInputs = [
  */
 
 function makeAllInputElements(formEl, arr) {
+  const inputShortcuts = {};
   arr.forEach((iObj) => {
     const inputEl = makeSingleInputElement(iObj);
     formEl.append(inputEl);
+    if (iObj.name) inputShortcuts[iObj.name] = inputEl;
   });
+  return inputShortcuts;
 }
 
 // { type: 'text', placeholder: 'Enter your name', name: 'username' },
@@ -44,4 +47,6 @@ function makeSingleInputElement(inputObj) {
 }
 
 const myFormEl = document.forms[0];
-makeAllInputElements(myFormEl, formInputs);
+const inputShortcuts = makeAllInputElements(myFormEl, formInputs);
+console.log('inputShortcuts ===', inputShortcuts);
+// inputShortcuts.age.value = 45;
