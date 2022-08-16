@@ -21,3 +21,18 @@
 9. https://edabit.com/challenge/H3fKTSK4dgwXRbfTP - Convert Year to Century
 
 10. https://edabit.com/challenge/NEPFa3NZSd8iiF3ps - Date Format
+
+
+## form 
+
+[nuoroda](https://colorlib.com/etc/cf/ContactFrom_v10/index.html)
+
+1. pagaminti forma, savo nuoziura kaip 
+2. valdom forma su js 
+3. surinkti visus inputus i objekta 
+4. pritaikyti validacijas 
+4.1 visi laukai privalomi
+4.2 tel numeri turi buti skaicius 
+4.3 emaila laukas turetu tureti @ raide 
+5. paprastas varijatas atvaizduoti visas klaidas bendrai virs formos 
+6. individualio klaidos po ivesties laukais ir laukai raudoni. 

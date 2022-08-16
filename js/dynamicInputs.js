@@ -1,6 +1,7 @@
 const formInputs = [
   { type: 'text', placeholder: 'Enter your name', name: 'username' },
   { type: 'number', placeholder: 'Enter your age', name: 'age' },
+  { type: 'date', placeholder: 'Enter this age', name: 'thisAge' },
   { type: 'password', placeholder: 'Enter your password', name: 'password', required: true },
   { type: 'submit', value: 'Login' },
 ];
