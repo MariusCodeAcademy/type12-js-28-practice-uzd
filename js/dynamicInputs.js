@@ -17,3 +17,31 @@ const formInputs = [
 //   age: ageHtmlEl
 //   ...
 // }
+
+/**
+ * This fucntion takes inputs array and creates corresponding html elements
+ *
+ * @param {HTMLFormElement} formEl
+ * @param {Object[]} arr
+ */
+
+function makeAllInputElements(formEl, arr) {
+  arr.forEach((iObj) => {
+    const inputEl = makeSingleInputElement(iObj);
+    formEl.append(inputEl);
+  });
+}
+
+// { type: 'text', placeholder: 'Enter your name', name: 'username' },
+
+function makeSingleInputElement(inputObj) {
+  const inputEl = document.createElement('input');
+  for (let key in inputObj) {
+    // inputEl.type = 'text'
+    inputEl[key] = inputObj[key];
+  }
+  return inputEl;
+}
+
+const myFormEl = document.forms[0];
+makeAllInputElements(myFormEl, formInputs);
