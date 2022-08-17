@@ -30,7 +30,7 @@
 1. pagaminti forma, savo nuoziura kaip 
 2. valdom forma su js 
 3. surinkti visus inputus i objekta 
-4. pritaikyti validacijas 
+4. pritaikyti validacijas
 4.1 visi laukai privalomi
 4.2 tel numeri turi buti skaicius 
 4.3 emaila laukas turetu tureti @ raide 

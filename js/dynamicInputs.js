@@ -1,9 +1,25 @@
-const formInputs = [
-  { type: 'text', placeholder: 'Enter your name', name: 'username' },
-  { type: 'number', placeholder: 'Enter your age', name: 'age' },
-  { type: 'date', placeholder: 'Enter this age', name: 'thisAge' },
-  { type: 'password', placeholder: 'Enter your password', name: 'password', required: true },
-  { type: 'submit', value: 'Login' },
+class DInput {
+  constructor({ type = 'text', placeholder, name, required = false, value }) {
+    this.type = type;
+    if (placeholder) this.placeholder = placeholder;
+    if (name) this.name = name;
+    if (required) this.required = required;
+    if (value) this.value = value;
+  }
+}
+
+const dFormInputs = [
+  new DInput({ placeholder: 'Enter your name', name: 'username' }),
+  new DInput({ type: 'number', placeholder: 'Enter your age', name: 'age' }),
+  new DInput({ type: 'date', placeholder: 'Enter this age', name: 'thisAge' }),
+  new DInput({
+    type: 'password',
+    placeholder: 'Enter your password',
+    name: 'password',
+    required: true,
+  }),
+  new DInput({ type: 'textarea', placeholder: 'Enter your message', name: 'body' }),
+  new DInput({ type: 'submit', value: 'Login' }),
 ];
 
 // 1
@@ -39,7 +55,7 @@ function makeAllInputElements(formEl, arr) {
 // { type: 'text', placeholder: 'Enter your name', name: 'username' },
 
 function makeSingleInputElement(inputObj) {
-  const inputEl = document.createElement('input');
+  const inputEl = document.createElement(inputObj.type === 'textarea' ? 'textarea' : 'input');
   for (let key in inputObj) {
     // inputEl.type = 'text'
     inputEl[key] = inputObj[key];
@@ -48,6 +64,6 @@ function makeSingleInputElement(inputObj) {
 }
 
 const myFormEl = document.forms[0];
-const inputShortcuts = makeAllInputElements(myFormEl, formInputs);
+const inputShortcuts = makeAllInputElements(myFormEl, dFormInputs);
 console.log('inputShortcuts ===', inputShortcuts);
 // inputShortcuts.age.value = 45;

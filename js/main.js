@@ -43,3 +43,5 @@ emp2.email; //➞ "mary.sue@company.com"
 
 const emp3 = new Employee('Antony', 'Walker');
 emp3.firstname; //➞ "Antony"
+
+// 7. https://edabit.com/challenge/kGLhgwGaLJsCMS7wS - Fullname and Email objectConstructors budu
