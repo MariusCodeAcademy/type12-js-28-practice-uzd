@@ -1,7 +1,7 @@
 class DInput {
-  constructor({ type = 'text', placeholder, name, required = false, value }) {
+  constructor({ type = 'text', pl, name, required = false, value }) {
     this.type = type;
-    if (placeholder) this.placeholder = placeholder;
+    if (pl) this.placeholder = pl;
     if (name) this.name = name;
     if (required) this.required = required;
     if (value) this.value = value;
@@ -9,31 +9,18 @@ class DInput {
 }
 
 const dFormInputs = [
-  new DInput({ placeholder: 'Enter your name', name: 'username' }),
-  new DInput({ type: 'number', placeholder: 'Enter your age', name: 'age' }),
-  new DInput({ type: 'date', placeholder: 'Enter this age', name: 'thisAge' }),
+  new DInput({ pl: 'Enter your name', name: 'username' }),
+  new DInput({ type: 'number', pl: 'Enter your age', name: 'age' }),
+  new DInput({ type: 'date', pl: 'Enter this age', name: 'thisAge' }),
   new DInput({
     type: 'password',
-    placeholder: 'Enter your password',
+    pl: 'Enter your password',
     name: 'password',
     required: true,
   }),
-  new DInput({ type: 'textarea', placeholder: 'Enter your message', name: 'body' }),
+  new DInput({ type: 'textarea', pl: 'Enter your message', name: 'body' }),
   new DInput({ type: 'submit', value: 'Login' }),
 ];
-
-// 1
-// parasyti funkcija kuri priima argumentu nuoroda i htmle esancia forma ir objektu masyva toki kaip formInputs
-// ir is jo pagamina input elementus su visomis objektuose aprasytomis savybemis ir sudeda i forma.
-// forma turi buti aprasyta htmle.
-// createFormInputs(form, inputsArray)
-
-// 1.1 - funkcija grazina objekta kurio savybes yra nuorodos i sukurtus elementus
-// {
-//   username: usernameHtmlEl,
-//   age: ageHtmlEl
-//   ...
-// }
 
 /**
  * This fucntion takes inputs array and creates corresponding html elements
@@ -67,3 +54,16 @@ const myFormEl = document.forms[0];
 const inputShortcuts = makeAllInputElements(myFormEl, dFormInputs);
 console.log('inputShortcuts ===', inputShortcuts);
 // inputShortcuts.age.value = 45;
+
+// 1
+// parasyti funkcija kuri priima argumentu nuoroda i htmle esancia forma ir objektu masyva toki kaip formInputs
+// ir is jo pagamina input elementus su visomis objektuose aprasytomis savybemis ir sudeda i forma.
+// forma turi buti aprasyta htmle.
+// createFormInputs(form, inputsArray)
+
+// 1.1 - funkcija grazina objekta kurio savybes yra nuorodos i sukurtus elementus
+// {
+//   username: usernameHtmlEl,
+//   age: ageHtmlEl
+//   ...
+// }
