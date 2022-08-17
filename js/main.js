@@ -19,7 +19,7 @@ console.log(trans3); // outputs "trains"
 console.log(trans4); // outputs "motorcycles"
 
 // 7. https://edabit.com/challenge/kGLhgwGaLJsCMS7wS - Fullname and Email
-class Employee {
+class EmployeeClass {
   constructor(firstname, lastname) {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -33,6 +33,19 @@ class Employee {
     // validacijos
     return `${this.firstname.toLowerCase()}.${this.lastname.toLowerCase()}@company.com`;
   }
+}
+
+// ES5 Object constructors
+function Employee(firstname, lastname) {
+  this.firstname = firstname;
+  this.lastname = lastname;
+
+  this.email = `${this.firstname.toLowerCase()}.${this.lastname.toLowerCase()}@company.com`;
+
+  // methods
+  this.fullname = function () {
+    return `${this.firstname} ${this.lastname}`;
+  };
 }
 
 const emp1 = new Employee('John', 'Smith');
